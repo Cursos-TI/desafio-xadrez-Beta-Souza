@@ -46,21 +46,18 @@ int main() {
     int casasEsquerda = 1;
 
     printf("Movimento do Cavalo (em L: 2 vezes para Baixo, 1 vez para Esquerda):\n");
-
-    // FOR externo controla o movimento para baixo
-    for (int i = 0; i < casasBaixo; i++) {
-        printf("Baixo\n");
-
-        // WHILE aninhado executa apenas ao final do movimento para baixo
-        if (i == casasBaixo - 1) {
-            int j = 0;
-            while (j < casasEsquerda) {
-                printf("Esquerda\n");
-                j++;
-            }
-        }
-    }
     
+    // WHILE controla o movimento para esquerda
+    while (casasEsquerda--)
+    {   
+        for (int i = 0; i < casasBaixo; i++) // FOR controla o movimento para baixo
+        {
+            printf("Baixo\n");
+        }
+        
+        printf("Esquerda\n");
+    }
+  
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
