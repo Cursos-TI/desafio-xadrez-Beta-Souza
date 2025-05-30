@@ -24,6 +24,18 @@
         
     }
 
+// Função recursiva para movimentar da Rainha
+    void moverRainha(int casas) {
+        
+        if (casas > 0) {
+            printf("Esquerda\n");
+            moverRainha(casas - 1);
+        } 
+        
+    }
+
+    
+
 int main() {
     printf("**Nível Novato - Movimentação das Peças**\n");
     // *Implementação de Movimentação do Bispo*
@@ -88,5 +100,16 @@ int main() {
 
     printf("Movimento do Bispo (5 casas na diagonal para cima e à direita):\n");  
     moverBispo(5);
+
+    printf("\n");  
+
+    printf("Movimento da Rainha (8 casas para a esquerda):\n");  
+    moverRainha(8);
+    
+    printf("\n");  
+
+    printf("Movimento da Rainha (8 casas para a esquerda):\n");  
+    moverRainha(8);
+    
     return 0;
 }
