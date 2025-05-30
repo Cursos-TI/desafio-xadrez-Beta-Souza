@@ -14,6 +14,16 @@
         
     }
 
+// Função recursiva para movimentar a Bispo
+    void moverBispo(int casas) {
+        
+        if (casas > 0) {
+            printf("Cima e Direita\n");
+            moverBispo(casas - 1);
+        } 
+        
+    }
+
 int main() {
     printf("**Nível Novato - Movimentação das Peças**\n");
     // *Implementação de Movimentação do Bispo*
@@ -73,5 +83,10 @@ int main() {
     printf("**Nível Mestre - Funções Recursivas e Loops Aninhados**\n");
     printf("Movimento da Torre (5 casas para a direita):\n");    
     moverTorre(5);
+    
+    printf("\n");  
+
+    printf("Movimento do Bispo (5 casas na diagonal para cima e à direita):\n");  
+    moverBispo(5);
     return 0;
 }
