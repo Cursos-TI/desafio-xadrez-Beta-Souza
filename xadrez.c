@@ -34,7 +34,23 @@
         
     }
 
-    
+    // Função para movimentar o Cavalo com loops e break/continue
+    void moverCavalo(int movimentosVerticais, int movimentosHorizontais) {
+           
+        for (int i = 0, j = 0; i < movimentosVerticais + movimentosHorizontais; i++) {
+            // Movimentos para cima
+            if (i < movimentosVerticais) {
+                printf("Cima\n");
+                continue;  // Volta para o próximo passo vertical
+            }
+
+            // Movimento para direita após os dois "Cima"
+            while (j < movimentosHorizontais) {
+                printf("Direita\n");
+                break;  // Encerra o while após 1 movimento
+            }
+        }
+    }
 
 int main() {
     printf("**Nível Novato - Movimentação das Peças**\n");
@@ -108,8 +124,8 @@ int main() {
     
     printf("\n");  
 
-    printf("Movimento da Rainha (8 casas para a esquerda):\n");  
-    moverRainha(8);
+    printf("Movimento do Cavalo (1 movimento em L: Cima, Cima, Direita):\n");  
+    moverCavalo(2,1);
     
     return 0;
 }
